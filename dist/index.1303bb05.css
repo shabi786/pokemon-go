@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.card {
+  cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  flex-flow: column-reverse wrap;
+  align-items: center;
+  gap: 24px;
+  transition: all .3s ease-in-out;
+  display: flex;
+  box-shadow: 0 2px 4px #0000000f;
+}
+
+.card:hover {
+  transform: translate3d(0, -1px, 0);
+  box-shadow: 0 19px 43px #00000038;
+}
+
+.card h3 {
+  padding: 12px;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+
+.ability-container img {
+  background-color: #f2f2f2;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.ability {
+  justify-content: center;
+  gap: 8px;
+  display: flex;
+}
+
+.ability p {
+  background-color: #ff0;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */
