@@ -2985,7 +2985,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/PokemonList":"b7P36","/styles.css":"7N9bM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"kKyxu"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"kKyxu","./components/PokemonList":"b7P36","/styles.css":"7N9bM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27170,11 +27170,11 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"b7P36":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bd80 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"kKyxu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fc8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bd80.prelude(module);
+$parcel$ReactRefreshHelpers$fc8e.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27182,133 +27182,28 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _pokemonImage = require("./PokemonImage");
-var _pokemonImageDefault = parcelHelpers.interopDefault(_pokemonImage);
-var _s = $RefreshSig$();
-const PokemonList = ()=>{
-    _s();
-    const [pokemon, setPokemon] = (0, _react.useState)([]);
-    const getPokemon = async ()=>{
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
-        const data = await response.json();
-        setPokemon(data.results);
-    };
-    (0, _react.useEffect)(()=>{
-        getPokemon();
-    }, []);
-    const limitedPokemon = pokemon.slice(0, 20);
+const Header = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container",
-        children: limitedPokemon.map((character)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: character.name
-                    }, void 0, false, {
-                        fileName: "components/PokemonList.js",
-                        lineNumber: 21,
-                        columnNumber: 25
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonImageDefault.default), {
-                        url: character.url
-                    }, void 0, false, {
-                        fileName: "components/PokemonList.js",
-                        lineNumber: 22,
-                        columnNumber: 25
-                    }, undefined)
-                ]
-            }, character.name, true, {
-                fileName: "components/PokemonList.js",
-                lineNumber: 20,
-                columnNumber: 21
-            }, undefined))
+        className: "header",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: "Pokemon Go"
+        }, void 0, false, {
+            fileName: "components/Header.js",
+            lineNumber: 6,
+            columnNumber: 13
+        }, undefined)
     }, void 0, false, {
-        fileName: "components/PokemonList.js",
-        lineNumber: 17,
+        fileName: "components/Header.js",
+        lineNumber: 5,
         columnNumber: 9
     }, undefined);
 };
-_s(PokemonList, "4D0jkhGq0ZINAQVoOiMhL4+r3a8=");
-_c = PokemonList;
-exports.default = PokemonList;
+_c = Header;
+exports.default = Header;
 var _c;
-$RefreshReg$(_c, "PokemonList");
+$RefreshReg$(_c, "Header");
 
-  $parcel$ReactRefreshHelpers$bd80.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./PokemonImage":"1tsT3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1tsT3":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$23a4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$23a4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-const PokemonImage = ({ url })=>{
-    _s();
-    const [imgUrl, setImgUrl] = (0, _react.useState)("");
-    const [ability, setAbility] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        fetch(url).then((response)=>response.json()).then((data)=>{
-            setImgUrl(data?.sprites?.other?.dream_world?.front_default);
-            setAbility(data?.types);
-        }).catch((error)=>console.log(error));
-    }, [
-        url
-    ]);
-    if (!imgUrl) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "...Loading"
-    }, void 0, false, {
-        fileName: "components/PokemonImage.js",
-        lineNumber: 17,
-        columnNumber: 25
-    }, undefined);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "ability-container",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: imgUrl
-            }, void 0, false, {
-                fileName: "components/PokemonImage.js",
-                lineNumber: 20,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "ability",
-                children: ability.map((res)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: res.type.name
-                    }, res.type.slot, false, {
-                        fileName: "components/PokemonImage.js",
-                        lineNumber: 23,
-                        columnNumber: 21
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "components/PokemonImage.js",
-                lineNumber: 21,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "components/PokemonImage.js",
-        lineNumber: 19,
-        columnNumber: 9
-    }, undefined);
-};
-_s(PokemonImage, "9+/36+i+9OqbIxW4VtFk/WDxCUc=");
-_c = PokemonImage;
-exports.default = PokemonImage;
-var _c;
-$RefreshReg$(_c, "PokemonImage");
-
-  $parcel$ReactRefreshHelpers$23a4.postlude(module);
+  $parcel$ReactRefreshHelpers$fc8e.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -27481,11 +27376,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"7N9bM":[function() {},{}],"kKyxu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fc8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"7422ead32dcc1e6b":"786KC"}],"b7P36":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bd80 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fc8e.prelude(module);
+$parcel$ReactRefreshHelpers$bd80.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27493,32 +27388,139 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const Header = ()=>{
+var _pokemonImage = require("./PokemonImage");
+var _pokemonImageDefault = parcelHelpers.interopDefault(_pokemonImage);
+var _s = $RefreshSig$();
+const PokemonList = ()=>{
+    _s();
+    const [pokemon, setPokemon] = (0, _react.useState)([]);
+    const getPokemon = async ()=>{
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
+        const data = await response.json();
+        setPokemon(data.results);
+        console.log(data.results);
+    };
+    (0, _react.useEffect)(()=>{
+        getPokemon();
+    }, []);
+    const limitedPokemon = pokemon.slice(0, 20);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Pokemon Go"
-        }, void 0, false, {
-            fileName: "components/Header.js",
-            lineNumber: 6,
-            columnNumber: 13
-        }, undefined)
+        className: "container",
+        children: limitedPokemon.map((character)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "card",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: character.name
+                    }, void 0, false, {
+                        fileName: "components/PokemonList.js",
+                        lineNumber: 22,
+                        columnNumber: 25
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonImageDefault.default), {
+                        url: character.url
+                    }, void 0, false, {
+                        fileName: "components/PokemonList.js",
+                        lineNumber: 23,
+                        columnNumber: 25
+                    }, undefined)
+                ]
+            }, character.name, true, {
+                fileName: "components/PokemonList.js",
+                lineNumber: 21,
+                columnNumber: 21
+            }, undefined))
     }, void 0, false, {
-        fileName: "components/Header.js",
-        lineNumber: 5,
+        fileName: "components/PokemonList.js",
+        lineNumber: 18,
         columnNumber: 9
     }, undefined);
 };
-_c = Header;
-exports.default = Header;
+_s(PokemonList, "4D0jkhGq0ZINAQVoOiMhL4+r3a8=");
+_c = PokemonList;
+exports.default = PokemonList;
 var _c;
-$RefreshReg$(_c, "Header");
+$RefreshReg$(_c, "PokemonList");
 
-  $parcel$ReactRefreshHelpers$fc8e.postlude(module);
+  $parcel$ReactRefreshHelpers$bd80.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["cIuSe","1xC6H","2Ew96"], "2Ew96", "parcelRequire1983")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./PokemonImage":"1tsT3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1tsT3":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$23a4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$23a4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const PokemonImage = ({ url })=>{
+    _s();
+    const [imgUrl, setImgUrl] = (0, _react.useState)("");
+    const [ability, setAbility] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        fetch(url).then((response)=>response.json()).then((data)=>{
+            setImgUrl(data?.sprites?.other?.dream_world?.front_default);
+            setAbility(data?.types);
+        }).catch((error)=>console.log(error));
+    }, [
+        url
+    ]);
+    if (!imgUrl) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "...Loading"
+    }, void 0, false, {
+        fileName: "components/PokemonImage.js",
+        lineNumber: 17,
+        columnNumber: 25
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "ability-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: imgUrl,
+                alt: "Pokemon"
+            }, void 0, false, {
+                fileName: "components/PokemonImage.js",
+                lineNumber: 20,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "ability",
+                children: ability.map((res)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: res.type.name
+                    }, res.type.slot, false, {
+                        fileName: "components/PokemonImage.js",
+                        lineNumber: 23,
+                        columnNumber: 21
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "components/PokemonImage.js",
+                lineNumber: 21,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "components/PokemonImage.js",
+        lineNumber: 19,
+        columnNumber: 9
+    }, undefined);
+};
+_s(PokemonImage, "9+/36+i+9OqbIxW4VtFk/WDxCUc=");
+_c = PokemonImage;
+exports.default = PokemonImage;
+var _c;
+$RefreshReg$(_c, "PokemonImage");
+
+  $parcel$ReactRefreshHelpers$23a4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7N9bM":[function() {},{}]},["cIuSe","1xC6H","2Ew96"], "2Ew96", "parcelRequire1983")
 
 //# sourceMappingURL=index.7826abd7.js.map

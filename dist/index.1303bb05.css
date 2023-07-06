@@ -31,6 +31,8 @@
 
 .card h3 {
   padding: 12px;
+  font-family: sans-serif;
+  font-weight: bolder;
 }
 
 .header {
@@ -58,7 +60,7 @@
 }
 
 .ability p {
-  background-color: #ff0;
+  background-color: #ffa;
   border-radius: 12px;
   padding: 8px;
 }

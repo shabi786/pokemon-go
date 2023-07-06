@@ -17,7 +17,7 @@ const PokemonImage = ({ url }) => {
     if (!imgUrl) return <h1>...Loading</h1>
     return (
         <div className="ability-container">
-            <img src={imgUrl} />
+            <img src={imgUrl} alt="Pokemon" />
             <div className="ability">
                 {ability.map((res) =>
                     <p key={res.type.slot}>{res.type.name}</p>

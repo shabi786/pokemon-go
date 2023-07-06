@@ -7,6 +7,7 @@ const PokemonList = () => {
         const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0');
         const data = await response.json();
         setPokemon(data.results)
+        console.log(data.results)
     }
     useEffect(() => {
         getPokemon();
