@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { POKE_API } from '../constant';
 import PokemonImage from './PokemonImage';
 
 const PokemonList = () => {
     const [pokemon, setPokemon] = useState([]);
     const getPokemon = async () => {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0');
+        const response = await fetch(POKE_API);
         const data = await response.json();
         setPokemon(data.results)
         console.log(data.results)

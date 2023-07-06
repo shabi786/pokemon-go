@@ -27388,6 +27388,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _constant = require("../constant");
 var _pokemonImage = require("./PokemonImage");
 var _pokemonImageDefault = parcelHelpers.interopDefault(_pokemonImage);
 var _s = $RefreshSig$();
@@ -27395,7 +27396,7 @@ const PokemonList = ()=>{
     _s();
     const [pokemon, setPokemon] = (0, _react.useState)([]);
     const getPokemon = async ()=>{
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
+        const response = await fetch((0, _constant.POKE_API));
         const data = await response.json();
         setPokemon(data.results);
         console.log(data.results);
@@ -27413,25 +27414,25 @@ const PokemonList = ()=>{
                         children: character.name
                     }, void 0, false, {
                         fileName: "components/PokemonList.js",
-                        lineNumber: 22,
+                        lineNumber: 23,
                         columnNumber: 25
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokemonImageDefault.default), {
                         url: character.url
                     }, void 0, false, {
                         fileName: "components/PokemonList.js",
-                        lineNumber: 23,
+                        lineNumber: 24,
                         columnNumber: 25
                     }, undefined)
                 ]
             }, character.name, true, {
                 fileName: "components/PokemonList.js",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 21
             }, undefined))
     }, void 0, false, {
         fileName: "components/PokemonList.js",
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 9
     }, undefined);
 };
@@ -27446,7 +27447,7 @@ $RefreshReg$(_c, "PokemonList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./PokemonImage":"1tsT3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1tsT3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./PokemonImage":"1tsT3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../constant":"hVDs4"}],"1tsT3":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$23a4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27521,6 +27522,12 @@ $RefreshReg$(_c, "PokemonImage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7N9bM":[function() {},{}]},["cIuSe","1xC6H","2Ew96"], "2Ew96", "parcelRequire1983")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hVDs4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "POKE_API", ()=>POKE_API);
+const POKE_API = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7N9bM":[function() {},{}]},["cIuSe","1xC6H","2Ew96"], "2Ew96", "parcelRequire1983")
 
 //# sourceMappingURL=index.7826abd7.js.map
